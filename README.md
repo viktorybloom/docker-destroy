@@ -1,6 +1,6 @@
 # docker-destroy
 
-Useful for your local dev environment. You can copy `docker-destroy` to your home directory and run `./docker-destroy` to wipe your docker environment. 
+Useful for your local dev environment.
 
 Overview: 
 

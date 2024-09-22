@@ -7,23 +7,17 @@ Overview:
 ### Have a look at docker system rescource usage
 docker system df
 
-### Stop all running containers
-docker ps -a -q | xargs --no-run-if-empty docker stop
+### Remove images
+docker image prune -a -f
 
-### Remove all containers
-docker ps -a -q | xargs --no-run-if-empty docker rm
-
-### Remove all images
-docker images -a -q | xargs --no-run-if-empty docker rmi
+### Remove build cache
+docker buildx prune -f
 
 ### Remove all volumes
-docker volume ls -q | xargs --no-run-if-empty docker volume rm
+docker volume prune -f
 
-### Remove all networks except default ones
-docker network ls -q | grep -vE '^(bridge|host|none)$' | xargs --no-run-if-empty docker network rm
-
-### DESTROY
-docker system prune -f
+### DESTROY -- tbh, just do this if you mess everything up.
+docker system prune --volumes -af
 
 ### Useful link
 https://depot.dev/blog/docker-clear-cache

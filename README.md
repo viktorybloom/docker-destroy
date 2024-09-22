@@ -25,3 +25,5 @@ docker network ls -q | grep -vE '^(bridge|host|none)$' | xargs --no-run-if-empty
 ### DESTROY
 docker system prune -f
 
+### Useful link
+https://depot.dev/blog/docker-clear-cache

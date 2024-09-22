@@ -19,3 +19,6 @@ docker volume ls -q | xargs --no-run-if-empty docker volume rm
 ### Remove all networks except default ones
 docker network ls -q | grep -vE '^(bridge|host|none)$' | xargs --no-run-if-empty docker network rm
 
+### DESTROY
+docker system prune -f
+

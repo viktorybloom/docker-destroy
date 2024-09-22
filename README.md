@@ -4,6 +4,9 @@ Useful for your local dev environment. You can copy `docker-destroy` to your hom
 
 Overview: 
 
+### Have a look at docker system rescource usage
+docker system df
+
 ### Stop all running containers
 docker ps -a -q | xargs --no-run-if-empty docker stop
 

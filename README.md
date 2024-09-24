@@ -17,7 +17,7 @@ docker buildx prune -f
 docker volume prune -f
 
 ### DESTROY -- tbh, just do this if you mess everything up.
-docker system prune -af
+docker system prune -a
 
 ### Useful link
 https://depot.dev/blog/docker-clear-cache
